@@ -2,9 +2,11 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import moment from "moment";
 import Marquee from "react-fast-marquee";
-import { Button, Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 const Header = () => {
+  // const { user } = useContext(AuthContext);
+
   return (
     <Container>
       <div className="text-center">
@@ -22,27 +24,38 @@ const Header = () => {
           some text.
         </Marquee>
       </div>
-      <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
+      {/* <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
         <Container>
-          {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+          
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
+              <Nav.Link href="#features">
+                <Link to="/">Home</Link>
+              </Nav.Link>
               <Nav.Link href="#pricing">About</Nav.Link>
               <Nav.Link href="#pricing">Career</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">
-                <Button variant="secondary">Profile</Button>
-              </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                <Button variant="outline-primary">Login</Button>
+              {user && (
+                <Nav.Link>
+                  <span className="me-2">{user.displayName}</span>
+                  <FaUserCircle className="fs-3"></FaUserCircle>
+                </Nav.Link>
+              )}
+              <Nav.Link eventKey={2}>
+                {user ? (
+                  <Button variant="outline-primary">Log-out</Button>
+                ) : (
+                  <Link to="/login">
+                    <Button variant="outline-primary">Login</Button>
+                  </Link>
+                )}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> */}
     </Container>
   );
 };
