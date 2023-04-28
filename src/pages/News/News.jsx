@@ -6,8 +6,8 @@ import EditorsInsight from "./EditorsInsight/EditorsInsight";
 
 const News = () => {
   const news = useLoaderData();
-  const { title, image_url, details, author, total_view, rating, category_id } =
-    news;
+  console.log(news);
+  const { title, image_url, details, category_id } = news;
   return (
     <div>
       <Card>

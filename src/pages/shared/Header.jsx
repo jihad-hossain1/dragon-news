@@ -24,38 +24,6 @@ const Header = () => {
           some text.
         </Marquee>
       </div>
-      {/* <Navbar collapseOnSelect expand="lg" bg="white" variant="white">
-        <Container>
-          
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link href="#features">
-                <Link to="/">Home</Link>
-              </Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link href="#pricing">Career</Nav.Link>
-            </Nav>
-            <Nav>
-              {user && (
-                <Nav.Link>
-                  <span className="me-2">{user.displayName}</span>
-                  <FaUserCircle className="fs-3"></FaUserCircle>
-                </Nav.Link>
-              )}
-              <Nav.Link eventKey={2}>
-                {user ? (
-                  <Button variant="outline-primary">Log-out</Button>
-                ) : (
-                  <Link to="/login">
-                    <Button variant="outline-primary">Login</Button>
-                  </Link>
-                )}
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar> */}
     </Container>
   );
 };

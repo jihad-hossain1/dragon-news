@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import first from "../../../assets/1.png";
+import second from "../../../assets/2.png";
+import third from "../../../assets/3.png";
 const LeftNav = () => {
   const [categories, setCategories] = useState([]);
-
+  console.log(categories);
   useEffect(() => {
     fetch("http://localhost:5000/categories")
       .then((res) => res.json())
@@ -28,6 +30,12 @@ const LeftNav = () => {
             </Link>
           </p>
         ))}
+      </div>
+      <div className="">
+        <img className="mb-2" src={first} alt="" />
+
+        <img className="mb-2" src={second} alt="" />
+        <img className="mb-2" src={third} alt="" />
       </div>
     </div>
   );
