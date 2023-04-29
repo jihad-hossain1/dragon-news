@@ -1,4 +1,4 @@
-import React from "react";
+// import React, { useState } from "react";
 import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -8,8 +8,9 @@ const Login = () => {
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  // const [loading, setLoading] = useState(true);
 
-  const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || "/category/0";
 
   const handleLogin = (event) => {
     event.preventDefault();
