@@ -5,7 +5,7 @@ import second from "../../../assets/2.png";
 import third from "../../../assets/3.png";
 const LeftNav = () => {
   const [categories, setCategories] = useState([]);
-  console.log(categories);
+  // console.log(categories);
   useEffect(() => {
     fetch("http://localhost:5000/categories")
       .then((res) => res.json())
